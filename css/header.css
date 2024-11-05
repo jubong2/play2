@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+header {
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  width: 100%;
+}
+
+.header-warp {
+  background-color: #fff;
+  height: 130px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  transition: padding-top 0.3s ease, background-color 0.3s ease; /* 배경색 및 패딩 변화에 애니메이션 추가 */
+}
+.header-warp.scrolled {
+  background-color: black;
+
+  width: 100%;
+  margin-top: -60px;
+}
+.logoImg {
+  transition: opacity 0.3s ease;
+}
+
+.logoimg.scrolled {
+  width: 56%;
+  padding-top: 10%;
+  content: url("../images/playshop-logo5.png"); /* 스크롤된 이미지 */
+}
+.header-left {
+  padding: 1%;
+  padding-left: 1%;
+  display: block;
+  position: relative;
+  width: 20%;
+  height: 100%;
+  z-index: 1; /* 서브메뉴보다 높은 z-index 설정 */
+}
+.header-left > a {
+  width: 100%;
+}
+.header-left a img {
+  width: 100%;
+}
+.header-right {
+  width: 60%;
+  height: 100%;
+  border-bottom: 15px solid black;
+  display: block;
+  position: absolute;
+  right: 0;
+  padding: 10px 0;
+}
+
+.header-right-top {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.log-warp {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  transform: translateX(-5%);
+}
+.log-warp > div {
+  color: #fff;
+  font-weight: bold;
+  background-color: black;
+  text-align: center;
+  padding: 3% 20px;
+}
+
+.log-warp > div:hover {
+  background-color: rgb(91, 85, 85);
+}
+.header-navi-bottom {
+  display: block;
+  position: relative;
+
+  width: 100%;
+  height: 50%;
+}
+.header-navi {
+  height: 100%;
+
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateX(-2%, -50%);
+
+  width: 60%;
+  display: flex;
+}
+.header-navi > li {
+  width: calc(100% / 4);
+}
+.header-navi > li > a {
+  padding-bottom: 5px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative; /* 자식 요소의 절대 위치 설정을 위해 추가 */
+}
+
+.header-navi > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-navi > li > a.scrolled::after {
+  transform: scaleX(0); /* 호버 시 보이도록 변환 */
+}
+
+.header-navi > li > a.scrolled:hover::after {
+  transform: scaleX(1); /* 호버 시 보이도록 변환 */
+  background: #fff; /* 색상 변경 */
+}
+
+.header-navi > li > a:hover::after {
+  transform: scaleX(1); /* 호버 시 보이도록 변환 */
+}
+.header-navi > li > a.scrolled {
+  color: #fff;
+}
+
+.submenu {
+  width: calc(100% / 4);
+  background-color: #fff;
+  margin-top: 8px;
+  position: absolute; /* 서브메뉴 위치를 절대 위치로 */
+  opacity: 0; /* 기본적으로 투명 */
+  visibility: hidden; /* 안 보이게 설정 */
+  transform: translateY(-10px); /* 위쪽으로 약간 이동한 상태 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* typo 수정: 'ztransition' -> 'transition' */
+}
+.submenu > li {
+  padding-left: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  line-height: 3;
+}
+
+.submenu > li:hover {
+  color: #fff;
+  background-color: black;
+}
+.header-navi > li:hover .submenu {
+  opacity: 1; /* 호버 시 서브메뉴가 보이게 */
+  visibility: visible; /* 보이도록 설정 */
+  transform: translateY(0); /* 원래 위치로 이동 */
+}

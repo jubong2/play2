@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.brand {
+  margin-bottom: 200px;
+  margin-top: 5%;
+  width: 100%;
+  position: relative;
+}
+
+.brand-button {
+  padding: 10px 0;
+  background-color: black;
+  width: 150px;
+  cursor: pointer;
+}
+.brand-button > p {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.brand-infor {
+  background-color: rgba(182, 179, 179, 0.188);
+  display: flex; /* 보이게 할 때는 flex로 설정 */
+  opacity: 0; /* 투명도 초기화 */
+  max-height: 0; /* 최대 높이 초기화 */
+  padding: 0 3%; /* 패딩 초기화 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+  transition: max-height 0.5s ease, opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.brand-infor.show {
+  opacity: 1; /* 불투명도 */
+  max-height: 500px; /* 원하는 최대 높이 설정 */
+  padding: 5% 3%; /* 패딩 추가 */
+}
+.brand-infor-left {
+  border-right: 2px solid black;
+  width: 40%;
+  padding: 0 20px;
+}
+.brand-infor-left > h1 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.brand-infor-left > p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  line-height: 1.6;
+}
+.brand-infor-left > p > span {
+  font-size: 25px;
+  font-weight: bold;
+}
+.brand-infor-rigth {
+  padding: 0 20px;
+  width: 60%;
+}
+.color {
+  font-weight: bold;
+  font-size: 18px !important;
+  color: rgb(119, 93, 141);
+}
+
+.brand-infor-rigth > div > h2 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.brand-infor-rigth > div > p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}

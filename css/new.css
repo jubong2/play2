@@ -1,0 +1,97 @@
+@charset "UTF-8";
+.new {
+  padding: 50px 0;
+  background-color: rgb(248, 248, 248);
+  margin-bottom: 200px;
+}
+.newtitle > h1 {
+  text-align: right;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+.newtitle > p {
+  text-align: right;
+  font-size: 20px;
+  color: #8c8c8c;
+  padding-bottom: 20px;
+}
+.new-imgbox {
+  background-color: #8c8c8c;
+  display: block;
+  height: 500px;
+  position: relative;
+}
+.new-imgbox > a {
+  overflow: hidden;
+  height: 500px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.new-imgbox > a > img {
+  width: 100%;
+}
+.newscale {
+  scale: 1.1;
+}
+.new-icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 30px;
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  cursor: pointer;
+}
+.new-info {
+  margin-bottom: 30px;
+}
+.new-info h1 {
+  margin: 50px 0;
+}
+.new-info > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-button {
+  display: block;
+  position: relative;
+  padding: 2% 0;
+  margin-left: 68%;
+  width: 30%;
+  background-color: black;
+}
+.product-button > a {
+  color: #fff;
+  font-weight: bold;
+}
+.newpagination {
+  position: absolute;
+  bottom: -5% !important;
+}
+
+.newpagination > span {
+  background-color: black;
+}
+
+.new-page-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+.new-page-button > button {
+  margin-top: 50px;
+  width: 20%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+  background-color: black;
+}
+.new-page-button > button > a {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}

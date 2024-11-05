@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.banner {
+  font-family: "SF_HambakSnow";
+  z-index: 0;
+
+  /* height: 700px; */
+
+  padding: 0 20px;
+  padding-top: 150px;
+  width: 100%;
+  position: relative;
+}
+.banner-warp > div {
+  width: calc(100% / 3);
+}
+.banner-warp {
+  overflow: hidden;
+  width: 90% !important;
+  margin: 0 auto;
+  gap: 30px;
+  display: flex;
+}
+
+.bannerimg {
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+.bannerimg img {
+  width: 100%;
+}
+.banner-center > div {
+  height: auto;
+}
+
+.banner-text {
+  /* padding: 10px 0; */
+  font-weight: bold;
+  font-size: 50px;
+}
+.banner-left,
+.banner-right {
+  padding-top: 4%;
+
+  width: 100%;
+}
+.banner-text:nth-of-type(1) {
+  text-align: right;
+}
+.banner-right > .banner-text:nth-of-type(1) {
+  text-align: left;
+}
+.banner-right > .banner-text:nth-of-type(2) {
+  text-align: right;
+}
+
+.brand-infor-rigth > div > h2 .bannerimgcenter {
+  height: auto;
+  transform: translateY(-100px); /* 이미지 위로 10px 이동 */
+}
+.minibanner {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 200px;
+}
+.minibanner > a > img {
+  width: 100%;
+  height: 100%;
+}
