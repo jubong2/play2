@@ -56,7 +56,8 @@
 .creator-insta > a {
   display: flex;
   gap: 10px;
-  width: 20%;
+  width: 20px;
+  height: 20px;
 }
 .creator-insta > a > img {
   display: block;
@@ -276,6 +277,14 @@
     font-size: 20px;
   }
 }
+/* @media screen and (max-width: 1400px) {
+  .new-style {
+    font-size: 15px !important;
+  }
+  .creator-insta > a > p {
+    font-size: 15px;
+  }
+} */
 @media screen and (max-width: 1200px) {
 }
 @media screen and (max-width: 900px) {
@@ -286,12 +295,34 @@
     overflow: hidden;
     height: 250px;
   }
+  .creator-insta > a > p {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 800px) {
   .creator {
     margin-bottom: 100px;
   }
 }
+@media screen and (max-width: 700px) {
+  .new-style {
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .creator-info h1 {
+    font-size: 20px;
+  }
+  .creator-info > div > p {
+    font-size: 15px;
+  }
+  .creator-icon {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .creator-imgbox {
     overflow: hidden;
@@ -309,6 +340,16 @@
   }
   .allbutton > button > a {
     font-size: 15px;
+  }
+  .new-style {
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .creator-insta > a > p {
+    display: none;
   }
 }
 @media screen and (max-width: 400px) {
