@@ -17,7 +17,6 @@
 }
 .sportitle > p {
   text-align: center;
-
   font-size: 20px;
   color: #8c8c8c;
   padding-bottom: 20px;
@@ -33,7 +32,7 @@
 
 .sport-left {
   overflow: hidden;
-
+  display: block;
   width: 40%;
   scale: 1;
 }
@@ -64,6 +63,9 @@
   overflow: hidden;
   height: 50%;
 }
+.sport-right > div:hover .sport-hover {
+  opacity: 1;
+}
 .sport-right > div:last-child {
   margin-bottom: 0;
 }
@@ -78,12 +80,18 @@
   top: -50px; /* 원하는 위치로 조정 */
 }
 .sport-hover {
+  transition: opacity 0.5s ease;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(14, 13, 13, 0.5);
+}
+
+.sport-left:hover .sport-hover {
+  opacity: 1;
 }
 .sport-hover > div {
   position: absolute;
@@ -104,25 +112,28 @@
   font-size: 30px;
 }
 
-.color {
+.colorbox {
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: center;
   gap: 10%;
 }
 
-.color > p {
+.colorbox > p {
   display: block;
   width: 50px;
   height: 50px;
   background-color: blue;
 }
-
-.color > p:nth-child(2) {
+.colorbox-r > p {
+  width: 40px;
+  height: 40px;
+}
+.colorbox > p:nth-child(2) {
   background-color: rebeccapurple;
 }
-.color > p:nth-child(3) {
+.colorbox > p:nth-child(3) {
   background-color: rgb(238, 255, 0);
 }
 .sport-price {
@@ -164,4 +175,125 @@
 }
 .sport-button-wrap .sport-button > a {
   font-size: 15px;
+}
+/* 호버 */
+@media screen and (max-width: 1500px) {
+  .sport-left > a > img {
+    width: 100%;
+  }
+  .sport-editon-inner {
+    height: 400px;
+  }
+  .sport-left > a > img {
+    padding-top: -300px !important;
+    width: 100%;
+    scale: 1.2;
+  }
+  .sport-name {
+    font-size: 20px;
+  }
+  .colorbox > p {
+    width: 30px;
+    height: 30px;
+  }
+  .sport-hover-right .sport-name {
+    font-size: 18px;
+  }
+  .colorbox-r {
+    width: 50%;
+  }
+  .colorbox-r > p {
+    width: 20px;
+    height: 20px;
+  }
+  .sport-hover-right .sport-price {
+    font-size: 18px;
+  }
+  .sport-button {
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sport-left {
+    width: 60%;
+  }
+  .sport-button-wrap .sport-button {
+    width: 50%;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sport-left > a > img {
+    scale: 1;
+  }
+  .sport-editon-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sport-left,
+  .sport-right {
+    width: 100%;
+  }
+  .sport-editon-inner {
+    height: 1000px;
+  }
+  .sport-hover-right .sport-price {
+    font-size: 18px;
+  }
+  .sport-name,
+  .sport-hover-right .sport-name {
+    font-size: 20px !important;
+  }
+  .colorbox > p {
+    width: 30px;
+    height: 30px;
+  }
+  .colorbox-r > p {
+    width: 30px;
+    height: 30px;
+  }
+  .sport-price {
+    font-size: 18px !important;
+  }
+  .sport-button {
+    width: 200px;
+    height: 50px;
+  }
+  .sport-button > a {
+    font-size: 15px;
+  }
+  .sport-button-wrap .sport-button {
+    width: 200px;
+    height: 50px;
+  }
+  .sport-button-wrap .sport-button > a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sport-editon {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .sport-button {
+    width: 100px;
+    height: 30px;
+  }
+  .sport-button > a {
+    font-size: 15px;
+  }
+  .sport-button-wrap .sport-button {
+    width: 100px;
+    height: 30px;
+  }
+  .sport-button-wrap .sport-button > a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .sport-editon {
+    margin-bottom: 80px;
+  }
 }

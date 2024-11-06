@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .brand {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   margin-top: 5%;
   width: 100%;
   position: relative;
@@ -31,10 +31,13 @@
 
 .brand-infor.show {
   opacity: 1; /* 불투명도 */
-  max-height: 500px; /* 원하는 최대 높이 설정 */
+  max-height: 1000px; /* 원하는 최대 높이 설정 */
   padding: 5% 3%; /* 패딩 추가 */
 }
 .brand-infor-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   border-right: 2px solid black;
   width: 40%;
   padding: 0 20px;
@@ -74,4 +77,48 @@
   padding-bottom: 20px;
   font-size: 18px;
   line-height: 1.6;
+}
+@media screen and (max-width: 1200px) {
+  .brand-infor-rigth > div > h2 {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .brand-infor.show {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-infor-left {
+    width: 100%;
+    border-right: none;
+    padding-bottom: 5%;
+    border-bottom: 1px solid black;
+  }
+  .brand-infor-rigth {
+    padding-top: 5%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .brand-infor-left > h1 {
+    font-size: 20px;
+  }
+  .brand-infor-left > p {
+    font-size: 15px;
+  }
+  .brand-infor-left > p > span {
+    font-size: 18px;
+  }
+  .brand-infor-rigth > div > h2 {
+    font-size: 20px;
+  }
+  .brand-infor-rigth > div > p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .brand {
+    margin-bottom: 80px;
+  }
 }

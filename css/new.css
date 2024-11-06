@@ -58,7 +58,7 @@
   display: block;
   position: relative;
   padding: 2% 0;
-  margin-left: 68%;
+  margin-left: 60%;
   width: 30%;
   background-color: black;
 }
@@ -66,32 +66,87 @@
   color: #fff;
   font-weight: bold;
 }
+
 .newpagination {
   position: absolute;
   bottom: -5% !important;
 }
-
 .newpagination > span {
   background-color: black;
 }
 
-.new-page-button {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 50px;
+@media screen and (max-width: 1500px) {
+  .new-imgbox {
+    overflow: hidden;
+    height: 400px;
+  }
 }
-.new-page-button > button {
-  margin-top: 50px;
-  width: 20%;
-  height: 100%;
-  margin: 0 auto;
-  display: block;
-  background-color: black;
+@media screen and (max-width: 1300px) {
+  .new-imgbox {
+    overflow: hidden;
+    height: 300px;
+  }
+  .new-info h1 {
+    font-size: 25px;
+  }
+  .new-info > div {
+    gap: 40%;
+  }
+  .new-info > div > p {
+    font-size: 20px;
+  }
 }
-.new-page-button > button > a {
-  font-weight: bold;
-  font-size: 20px;
-  color: #fff;
-  letter-spacing: 2px;
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 900px) {
+  .newtitle > h1 {
+    font-size: 30px;
+  }
+  .new-imgbox {
+    overflow: hidden;
+    height: 250px;
+  }
+  .product-button {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .new {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .new-imgbox {
+    overflow: hidden;
+    height: 200px;
+  }
+  .newtitle > h1 {
+    font-size: 20px;
+  }
+  .newtitle > p {
+    font-size: 17px;
+  }
+  .product-button {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .new-imgbox {
+    overflow: hidden;
+    height: 200px;
+  }
+  .new-info h1 {
+    font-size: 20px;
+  }
+
+  .new-info > div > p {
+    font-size: 18px;
+  }
+  .allbutton > button {
+    width: 100px;
+  }
+  .new {
+    margin-bottom: 80px;
+  }
+
 }

@@ -13,15 +13,28 @@
   font-size: 50px;
   text-align: center;
 }
-
-.join > button {
-  background-color: black;
-  display: block;
-  margin: 0 auto;
-  width: 20%;
-  height: 50px;
+@media screen and (max-width: 800px) {
+  .join > h3 {
+    font-size: 30px;
+  }
+  .join {
+    height: 200px;
+    margin-bottom: 100px;
+  }
 }
-.join > button > a {
-  color: #fff;
-  font-weight: bold;
+@media screen and (max-width: 600px) {
+  .join {
+    height: 200px;
+  }
+  .join > h3 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .join {
+    margin-bottom: 80px;
+  }
+  .join > h3 {
+    font-size: 20px;
+  }
 }

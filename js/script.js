@@ -3,18 +3,21 @@ window.addEventListener("load", function () {
   const header = document.querySelector(".header-warp");
   const logoImg = document.querySelector(".logoimg");
   const headernavititle = document.querySelectorAll(".header-navi > li > a");
+  const mbBarIcon = document.querySelector(".mb-barcolor"); // .mb-barcolor는 <i> 태그에 적용됨
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
       // When scrolled down
       header.classList.add("scrolled");
       logoImg.classList.add("scrolled");
-      headernavititle.forEach((link) => link.classList.add("scrolled")); // Iterate through each link
-      headernavititleboder.forEach((link) => link.classList.add("scrolled"));
+      headernavititle.forEach((link) => link.classList.add("scrolled"));
+      mbBarIcon.classList.add("scrolled"); // <i> 태그에 scrolled 클래스 추가
     } else {
+      // When scrolled to the top
       header.classList.remove("scrolled");
       logoImg.classList.remove("scrolled");
-      headernavititle.forEach((link) => link.classList.remove("scrolled")); // Remove class on scroll up
+      headernavititle.forEach((link) => link.classList.remove("scrolled"));
+      mbBarIcon.classList.remove("scrolled"); // <i> 태그에서 scrolled 클래스 제거
     }
   });
 
@@ -33,8 +36,8 @@ window.addEventListener("load", function () {
   });
 
   var creatorswiper = new Swiper(".creatorSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 10,
     freeMode: true,
     loop: true, // 루프 모드를 활성화
 
@@ -46,10 +49,20 @@ window.addEventListener("load", function () {
       delay: 2500,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      // 800px 이상일 때 슬라이드를 2개씩 표시
+      800: {
+        slidesPerView: 3,
+      },
+
+      480: {
+        slidesPerView: 2.5, // 480px 이상에서 슬라이드 1개 표시
+      },
+    },
   });
   var newswiper = new Swiper(".newSwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 2,
+    spaceBetween: 10,
     freeMode: true,
     loop: true, // 루프 모드를 활성화
 
@@ -60,6 +73,16 @@ window.addEventListener("load", function () {
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
+    },
+    breakpoints: {
+      // 800px 이상일 때 슬라이드를 2개씩 표시
+      800: {
+        slidesPerView: 3,
+      },
+
+      480: {
+        slidesPerView: 2.5, // 480px 이상에서 슬라이드 1개 표시
+      },
     },
   });
 

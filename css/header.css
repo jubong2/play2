@@ -26,8 +26,9 @@ header {
 }
 
 .logoimg.scrolled {
-  width: 56%;
-  padding-top: 10%;
+  width: 100px;
+  position: absolute;
+  bottom: 15%;
   content: url("../images/playshop-logo5.png"); /* 스크롤된 이미지 */
 }
 .header-left {
@@ -40,6 +41,7 @@ header {
   z-index: 1; /* 서브메뉴보다 높은 z-index 설정 */
 }
 .header-left > a {
+  display: block;
   width: 100%;
 }
 .header-left a img {
@@ -102,6 +104,7 @@ header {
   width: calc(100% / 4);
 }
 .header-navi > li > a {
+  text-align: center;
   padding-bottom: 5px;
   width: 100%;
   font-size: 20px;
@@ -162,4 +165,53 @@ header {
   opacity: 1; /* 호버 시 서브메뉴가 보이게 */
   visibility: visible; /* 보이도록 설정 */
   transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+.mb-bar {
+  display: none;
+}
+.mb-barcolor {
+  color: #000000; /* 기본 아이콘 색상: 검정색 */
+}
+
+.mb-barcolor.scrolled {
+  color: #ffffff; /* 스크롤 시 아이콘 색상을 흰색으로 변경 */
+}
+
+@media screen and (max-width: 1000px) {
+  .header-navi {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-warp {
+    height: 80px;
+  }
+  .header-warp.scrolled {
+    margin-top: 0;
+  }
+  .header-right {
+    display: none;
+  }
+  .mb-bar {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: block;
+    font-size: 40px;
+  }
+  .header-left > a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+  }
+  .logoimg.scrolled {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
