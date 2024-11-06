@@ -115,6 +115,26 @@
     margin-bottom: 100px;
   }
 }
+@media screen and (max-width: 700px) {
+  .new-style {
+    text-align: center;
+    width: 60px;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .new-info h1 {
+    font-size: 20px;
+  }
+  .new-info > div > p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .new-icon {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .new-imgbox {
     overflow: hidden;
@@ -148,5 +168,4 @@
   .new {
     margin-bottom: 80px;
   }
-
 }

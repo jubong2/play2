@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
 
   var creatorswiper = new Swiper(".creatorSwiper", {
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 20,
     freeMode: true,
     loop: true, // 루프 모드를 활성화
 
@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
   });
   var newswiper = new Swiper(".newSwiper", {
     slidesPerView: 2,
-    spaceBetween: 10,
+    spaceBetween: 20,
     freeMode: true,
     loop: true, // 루프 모드를 활성화
 
