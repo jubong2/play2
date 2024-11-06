@@ -144,6 +144,7 @@
 }
 .sport-button {
   margin: 0 auto;
+  border: none;
   position: relative;
   display: block;
   width: 50%;
